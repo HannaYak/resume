@@ -1,66 +1,43 @@
-// Junior JavaScript Developer Resume - Dynamic Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Junior JavaScript Developer</title>
+  <link rel="stylesheet" href="style.css"> <!-- Ссылка на файл стилей -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="name"></h1> <!-- Имя -->
+      <p id="tagline"></p> <!-- Теглайн -->
+    </header>
 
-// Object to store personal information
-const personalInfo = {
-    name: "Junior JavaScript Developer",
-    tagline: "Passionate about coding, eager to learn, and ready to build amazing things!",
-    about: "I am a 20-year-old aspiring programmer with a strong foundation in JavaScript, HTML, and CSS. While I may not have years of experience, my dedication, problem-solving skills, and passion for coding make me an asset to any team.",
-    contact: {
-        email: "example@email.com",
-        github: "https://github.com/your-username"
-    }
-};
+    <section id="about">
+      <h2>About Me</h2>
+      <p id="aboutMe"></p> <!-- Описание обо мне -->
+    </section>
 
-// Array to store skills
-const skills = [
-    "JavaScript (ES6+), HTML5, CSS3",
-    "React.js (basic knowledge)",
-    "Version Control: Git and GitHub",
-    "Responsive Web Design",
-    "Problem-solving and debugging",
-    "Basic understanding of APIs"
-];
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul id="skillsList"></ul> <!-- Список навыков -->
+    </section>
 
-// Array to store projects
-const projects = [
-    {
-        name: "Personal Portfolio",
-        description: "A responsive website showcasing my work and skills (hosted on GitHub Pages)."
-    },
-    {
-        name: "Task Manager App",
-        description: "A to-do list app built with vanilla JavaScript."
-    },
-    {
-        name: "Weather App",
-        description: "An application that fetches and displays weather data using a public API."
-    }
-];
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul id="projectsList"></ul> <!-- Список проектов -->
+    </section>
 
-// Function to display resume sections
-function displayResume() {
-    console.log(`\n=== ${personalInfo.name} ===`);
-    console.log(personalInfo.tagline);
-    console.log(`\nAbout Me:\n${personalInfo.about}`);
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p id="contactInfo"></p> <!-- Контактная информация -->
+    </section>
 
-    console.log("\nSkills:");
-    skills.forEach(skill => console.log(`- ${skill}`));
+    <footer>
+      <button onclick="contactMe()">Contact Me</button> <!-- Кнопка для связи -->
+    </footer>
+  </div>
 
-    console.log("\nProjects:");
-    projects.forEach(project => console.log(`- ${project.name}: ${project.description}`));
-
-    console.log("\nContact Me:");
-    console.log(`Email: ${personalInfo.contact.email}`);
-    console.log(`GitHub: ${personalInfo.contact.github}`);
-}
-
-// Function to simulate contact action
-function contactMe() {
-    console.log("\nFeel free to reach out via email or GitHub. Looking forward to connecting!");
-}
-
-// Display resume
-displayResume();
-
-// Call contact function
-contactMe();
+  <script src="script.js"></script> <!-- Ссылка на файл с JavaScript -->
+</body>
+</html>
