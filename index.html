@@ -1,0 +1,66 @@
+// Junior JavaScript Developer Resume - Dynamic Website
+
+// Object to store personal information
+const personalInfo = {
+    name: "Junior JavaScript Developer",
+    tagline: "Passionate about coding, eager to learn, and ready to build amazing things!",
+    about: "I am a 20-year-old aspiring programmer with a strong foundation in JavaScript, HTML, and CSS. While I may not have years of experience, my dedication, problem-solving skills, and passion for coding make me an asset to any team.",
+    contact: {
+        email: "example@email.com",
+        github: "https://github.com/your-username"
+    }
+};
+
+// Array to store skills
+const skills = [
+    "JavaScript (ES6+), HTML5, CSS3",
+    "React.js (basic knowledge)",
+    "Version Control: Git and GitHub",
+    "Responsive Web Design",
+    "Problem-solving and debugging",
+    "Basic understanding of APIs"
+];
+
+// Array to store projects
+const projects = [
+    {
+        name: "Personal Portfolio",
+        description: "A responsive website showcasing my work and skills (hosted on GitHub Pages)."
+    },
+    {
+        name: "Task Manager App",
+        description: "A to-do list app built with vanilla JavaScript."
+    },
+    {
+        name: "Weather App",
+        description: "An application that fetches and displays weather data using a public API."
+    }
+];
+
+// Function to display resume sections
+function displayResume() {
+    console.log(`\n=== ${personalInfo.name} ===`);
+    console.log(personalInfo.tagline);
+    console.log(`\nAbout Me:\n${personalInfo.about}`);
+
+    console.log("\nSkills:");
+    skills.forEach(skill => console.log(`- ${skill}`));
+
+    console.log("\nProjects:");
+    projects.forEach(project => console.log(`- ${project.name}: ${project.description}`));
+
+    console.log("\nContact Me:");
+    console.log(`Email: ${personalInfo.contact.email}`);
+    console.log(`GitHub: ${personalInfo.contact.github}`);
+}
+
+// Function to simulate contact action
+function contactMe() {
+    console.log("\nFeel free to reach out via email or GitHub. Looking forward to connecting!");
+}
+
+// Display resume
+displayResume();
+
+// Call contact function
+contactMe();
