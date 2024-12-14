@@ -1,90 +1,74 @@
+/* Базовые стили */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
-}
-
-.resume-container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 2.2em;
-    margin: 0;
-    color: #222;
+.nav {
+    display: flex;
+    justify-content: center;
 }
 
-.tagline {
-    font-size: 1.2em;
-    color: #777;
+.nav-btn {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Показываем страницы, когда их активируем */
+.page.active {
+    display: block;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    color: #444;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-li {
-    background-color: #f0f8ff; 
     color: #333;
-    font-size: 1.1em;
-    margin: 10px 0;
-    padding: 10px;
-    border-left: 5px solid #4CAF50; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-li:nth-child(even) {
-    background-color: #e6f7ff; 
-    border-left: 5px solid #2196F3;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-li:hover {
-    transform: translateX(10px); 
-    background-color: #fef3c7; 
-    border-left-color: #FF9800; 
+/* Анимации */
+.page {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-
-p {
-    line-height: 1.6;
+.page.active {
+    opacity: 1;
 }
 
-button {
-    background-color: #444;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background-color: #222;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Мобильная версия */
+@media (max-width: 600px) {
+    .nav-btn {
+        font-size: 14px;
+    }
 }
