@@ -56,6 +56,30 @@ const pages = {
             <p>Each project helped me strengthen different skills, from understanding the DOM and event handling to API integration and responsive design.</p>
             <p>I am currently working on a new project: a clothing style assistant app that combines user input with dynamic suggestions. Stay tuned!</p>
         </section>
+    `,
+     contact: `
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to contact me via the following methods:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:anna@example.com">anna@example.com</a></li>
+                <li><strong>Phone:</strong> +1 234 567 890</li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anna-profile" target="_blank">linkedin.com/in/anna-profile</a></li>
+            </ul>
+            <p>Alternatively, fill out the form below, and I will get back to you as soon as possible.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
     `
 };
 
@@ -65,12 +89,9 @@ function loadPage(page) {
     contentDiv.innerHTML = pages[page];
 }
 
-// Добавляем обработчики событий на ссылки
+// Обработчики событий на ссылки
 document.addEventListener('DOMContentLoaded', () => {
-    // Загружаем "About Me" по умолчанию
-    loadPage('about');
-
-    // Обработчики кликов для навигации
+    loadPage('about'); // Загружаем "About Me" по умолчанию
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -78,5 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
             loadPage(page);
         });
     });
+
+    // Обработчик формы "Свяжитесь со мной"
+    document.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("Thank you for your message! I'll get back to you soon.");
+    });
 });
+
+
 
