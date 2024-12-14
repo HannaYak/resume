@@ -1,85 +1,53 @@
-
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-button {
-  background-color: #3498db;
-  color: white;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-3. JavaScript — script.js (динамическое заполнение данных)
-Этот файл будет содержать данные о тебе (например, имя, навыки, проекты) и скрипты для их отображения на веб-странице.
-
-javascript
-Skopiuj kod
-// Junior JavaScript Developer Resume - Dynamic Website
-
-// Объект для хранения личной информации
+// object for personal infomation 
 const personalInfo = {
-    name: "Junior JavaScript Developer", // Здесь пишешь своё имя
-    tagline: "Passionate about coding, eager to learn, and ready to build amazing things!", // Теглайн
-    about: "I am a 20-year-old aspiring programmer with a strong foundation in JavaScript, HTML, and CSS. While I may not have years of experience, my dedication, problem-solving skills, and passion for coding make me an asset to any team.", // О себе
+    name: "Anna - Junior JavaScript Developer",
+    tagline: "Driven, ambitious, and eager to become a top-tier developer!",
+    about: `
+        I am a 20-year-old aspiring programmer with a strong passion for web development and technology.
+        While I do not yet have extensive professional experience, I have spent countless hours learning 
+        and honing my skills in JavaScript, HTML, and CSS. I am committed to solving challenges, improving 
+        daily, and exploring new technologies like React.js.
+    `,
     contact: {
-        email: "example@email.com", // Почта
-        github: "https://github.com/your-username" // Ссылка на GitHub
+        email: "anna.dev@example.com",
+        github: "https://github.com/anna-aspiring-dev"
     }
 };
 
-// Массив с навыками
+// skills array
 const skills = [
-    "JavaScript (ES6+), HTML5, CSS3", // Навыки (добавь свои)
-    "React.js (basic knowledge)", // Навыки (добавь свои)
-    "Version Control: Git and GitHub", // Навыки (добавь свои)
-    "Responsive Web Design", // Навыки (добавь свои)
-    "Problem-solving and debugging", // Навыки (добавь свои)
-    "Basic understanding of APIs" // Навыки (добавь свои)
+    "JavaScript (ES6+): Proficient in core JS concepts, DOM manipulation, and functions.",
+    "HTML5 & CSS3: Solid understanding of semantic HTML and modern, responsive CSS design.",
+    "Version Control: Hands-on experience with Git and GitHub for managing code.",
+    "Responsive Web Design: Creating mobile-friendly, user-centered interfaces.",
+    "API Integration: Basic understanding of RESTful APIs and JSON data.",
+    "Problem-solving: Debugging and coding challenges.",
+    "React.js: Learning to create scalable UI components."
 ];
 
-// Массив с проектами
+//project array 
 const projects = [
     {
-        name: "Personal Portfolio", // Название проекта
-        description: "A responsive website showcasing my work and skills (hosted on GitHub Pages)." // Описание проекта
+        name: "Personal Portfolio Website",
+        description: "A responsive portfolio showcasing my work, hosted on GitHub Pages."
     },
     {
-        name: "Task Manager App", // Название проекта
-        description: "A to-do list app built with vanilla JavaScript." // Описание проекта
+        name: "Task Manager App",
+        description: "A to-do list application with local storage and vanilla JavaScript."
     },
     {
-        name: "Weather App", // Название проекта
-        description: "An application that fetches and displays weather data using a public API." // Описание проекта
+        name: "Weather App",
+        description: "An app that fetches and displays weather data using the OpenWeather API."
     }
 ];
 
-// Функция для отображения резюме на странице
+// Resume
 function displayResume() {
-    document.getElementById('name').textContent = personalInfo.name; // Заполняем имя
-    document.getElementById('tagline').textContent = personalInfo.tagline; // Заполняем теглайн
-    document.getElementById('aboutMe').textContent = personalInfo.about; // Заполняем описание
+    document.getElementById('name').textContent = personalInfo.name;
+    document.getElementById('tagline').textContent = personalInfo.tagline;
+    document.getElementById('aboutMe').textContent = personalInfo.about;
 
-    // Отображаем список навыков
+    // Skils
     const skillsList = document.getElementById('skillsList');
     skills.forEach(skill => {
         const li = document.createElement('li');
@@ -87,24 +55,27 @@ function displayResume() {
         skillsList.appendChild(li);
     });
 
-    // Отображаем список проектов
+    // Project
     const projectsList = document.getElementById('projectsList');
     projects.forEach(project => {
         const li = document.createElement('li');
-        li.textContent = `${project.name}: ${project.description}`;
+        li.innerHTML = `<strong>${project.name}:</strong> ${project.description}`;
         projectsList.appendChild(li);
     });
 
-    // Отображаем контактную информацию
+    // Contacs
     const contactInfo = document.getElementById('contactInfo');
-    contactInfo.innerHTML = `Email: <a href="mailto:${personalInfo.contact.email}">${personalInfo.contact.email}</a><br>
-                            GitHub: <a href="${personalInfo.contact.github}" target="_blank">${personalInfo.contact.github}</a>`;
+    contactInfo.innerHTML = `
+        <strong>Email:</strong> <a href="mailto:${personalInfo.contact.email}">${personalInfo.contact.email}</a><br>
+        <strong>GitHub:</strong> <a href="${personalInfo.contact.github}" target="_blank">${personalInfo.contact.github}</a>
+    `;
 }
 
-// Функция для имитации действия контакта
-function contactMe() {
-    alert("Feel free to reach out via email or GitHub. Looking forward to connecting!");
-}
+// buttom
+document.getElementById('contactButton').addEventListener('click', () => {
+    alert("Feel free to reach out! I'm excited to connect and collaborate.");
+});
 
-// Отображаем резюме
+// play
 displayResume();
+
