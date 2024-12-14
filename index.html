@@ -3,43 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior JavaScript Developer Resume</title>
+    <title>My Interactive Resume</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Основной контейнер -->
-    <div class="resume-container">
-        <!-- Имя и заголовок -->
-        <header>
-            <h1 id="name"></h1>
-            <p id="tagline" class="tagline"></p>
-        </header>
+    <header>
+        <div class="nav">
+            <button class="nav-btn" onclick="showPage('about')">About Me</button>
+            <button class="nav-btn" onclick="showPage('skills')">Skills</button>
+            <button class="nav-btn" onclick="showPage('projects')">Projects</button>
+        </div>
+    </header>
 
-        <!-- Раздел "Обо мне" -->
-        <section>
+    <main>
+        <div id="about" class="page">
             <h2>About Me</h2>
-            <p id="aboutMe"></p>
-        </section>
+            <p>I am a passionate 20-year-old aspiring JavaScript developer...</p>
+        </div>
 
-        <!-- Раздел "Навыки" -->
-        <section>
-            <h2>Skills</h2>
-            <ul id="skillsList"></ul>
-        </section>
+        <div id="skills" class="page">
+            <h2>My Skills</h2>
+            <ul id="skills-list"></ul>
+        </div>
 
-        <!-- Раздел "Проекты" -->
-        <section>
+        <div id="projects" class="page">
             <h2>Projects</h2>
-            <ul id="projectsList"></ul>
-        </section>
-
-        <!-- Раздел "Контакты" -->
-        <section>
-            <h2>Contact Me</h2>
-            <p id="contactInfo"></p>
-            <button id="contactButton">Get In Touch</button>
-        </section>
-    </div>
+            <ul id="projects-list"></ul>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
