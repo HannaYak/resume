@@ -1,81 +1,58 @@
-// object for personal infomation 
-const personalInfo = {
-    name: "Anna - Junior JavaScript Developer",
-    tagline: "Driven, ambitious, and eager to become a top-tier developer!",
-    about: `
-        I am a 20-year-old aspiring programmer with a strong passion for web development and technology.
-        While I do not yet have extensive professional experience, I have spent countless hours learning 
-        and honing my skills in JavaScript, HTML, and CSS. I am committed to solving challenges, improving 
-        daily, and exploring new technologies like React.js.
-    `,
-    contact: {
-        email: "anna.dev@example.com",
-        github: "https://github.com/anna-aspiring-dev"
-    }
-};
-
-// skills array
+// Массив с твоими навыками
 const skills = [
-    "JavaScript (ES6+): Proficient in core JS concepts, DOM manipulation, and functions.",
-    "HTML5 & CSS3: Solid understanding of semantic HTML and modern, responsive CSS design.",
-    "Version Control: Hands-on experience with Git and GitHub for managing code.",
-    "Responsive Web Design: Creating mobile-friendly, user-centered interfaces.",
-    "API Integration: Basic understanding of RESTful APIs and JSON data.",
-    "Problem-solving: Debugging and coding challenges.",
-    "React.js: Learning to create scalable UI components."
+    "JavaScript (ES6+), HTML5, CSS3",
+    "React.js (basic knowledge)",
+    "Version Control: Git and GitHub",
+    "Responsive Web Design",
+    "Problem-solving and debugging",
+    "Basic understanding of APIs"
 ];
 
-//project array 
+// Массив с проектами
 const projects = [
-    {
-        name: "Personal Portfolio Website",
-        description: "A responsive portfolio showcasing my work, hosted on GitHub Pages."
-    },
-    {
-        name: "Task Manager App",
-        description: "A to-do list application with local storage and vanilla JavaScript."
-    },
-    {
-        name: "Weather App",
-        description: "An app that fetches and displays weather data using the OpenWeather API."
-    }
+    "Personal Portfolio - A responsive website showcasing my work.",
+    "Task Manager App - A to-do list app built with vanilla JavaScript.",
+    "Weather App - Fetches and displays weather data using an API."
 ];
 
-// Resume
-function displayResume() {
-    document.getElementById('name').textContent = personalInfo.name;
-    document.getElementById('tagline').textContent = personalInfo.tagline;
-    document.getElementById('aboutMe').textContent = personalInfo.about;
+// Функция для отображения страницы
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));  // Скрыть все страницы
 
-    // Skils
-    const skillsList = document.getElementById('skillsList');
-    skills.forEach(skill => {
-        const li = document.createElement('li');
-        li.textContent = skill;
-        skillsList.appendChild(li);
-    });
+    const activePage = document.getElementById(pageId);
+    activePage.classList.add('active');  // Показать нужную страницу
 
-    // Project
-    const projectsList = document.getElementById('projectsList');
-    projects.forEach(project => {
-        const li = document.createElement('li');
-        li.innerHTML = `<strong>${project.name}:</strong> ${project.description}`;
-        projectsList.appendChild(li);
-    });
-
-    // Contacs
-    const contactInfo = document.getElementById('contactInfo');
-    contactInfo.innerHTML = `
-        <strong>Email:</strong> <a href="mailto:${personalInfo.contact.email}">${personalInfo.contact.email}</a><br>
-        <strong>GitHub:</strong> <a href="${personalInfo.contact.github}" target="_blank">${personalInfo.contact.github}</a>
-    `;
+    if (pageId === "skills") {
+        displaySkills();  // Добавляем контент в секцию Skills
+    } else if (pageId === "projects") {
+        displayProjects();  // Добавляем контент в секцию Projects
+    }
 }
 
-// buttom
-document.getElementById('contactButton').addEventListener('click', () => {
-    alert("Feel free to reach out! I'm excited to connect and collaborate.");
-});
+// Функция для отображения навыков
+function displaySkills() {
+    const skillsList = document.getElementById("skills-list");
+    skillsList.innerHTML = ''; // Очищаем список перед добавлением новых элементов
+    skills.forEach(skill => {
+        const listItem = document.createElement("li");
+        listItem.textContent = skill;
+        skillsList.appendChild(listItem);
+    });
+}
 
-// play
-displayResume();
+// Функция для отображения проектов
+function displayProjects() {
+    const projectsList = document.getElementById("projects-list");
+    projectsList.innerHTML = ''; // Очищаем список перед добавлением новых элементов
+    projects.forEach(project => {
+        const listItem = document.createElement("li");
+        listItem.textContent = project;
+        projectsList.appendChild(listItem);
+    });
+}
+
+// Изначально показываем About Me
+showPage('about');
+
 
