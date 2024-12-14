@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Junior JavaScript Developer</title>
-  <link rel="stylesheet" href="style.css"> <!-- Ссылка на файл стилей -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior JavaScript Developer Resume</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1 id="name"></h1> <!-- Имя -->
-      <p id="tagline"></p> <!-- Теглайн -->
-    </header>
+    <!-- Основной контейнер -->
+    <div class="resume-container">
+        <!-- Имя и заголовок -->
+        <header>
+            <h1 id="name"></h1>
+            <p id="tagline" class="tagline"></p>
+        </header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p id="aboutMe"></p> <!-- Описание обо мне -->
-    </section>
+        <!-- Раздел "Обо мне" -->
+        <section>
+            <h2>About Me</h2>
+            <p id="aboutMe"></p>
+        </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul id="skillsList"></ul> <!-- Список навыков -->
-    </section>
+        <!-- Раздел "Навыки" -->
+        <section>
+            <h2>Skills</h2>
+            <ul id="skillsList"></ul>
+        </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul id="projectsList"></ul> <!-- Список проектов -->
-    </section>
+        <!-- Раздел "Проекты" -->
+        <section>
+            <h2>Projects</h2>
+            <ul id="projectsList"></ul>
+        </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p id="contactInfo"></p> <!-- Контактная информация -->
-    </section>
+        <!-- Раздел "Контакты" -->
+        <section>
+            <h2>Contact Me</h2>
+            <p id="contactInfo"></p>
+            <button id="contactButton">Get In Touch</button>
+        </section>
+    </div>
 
-    <footer>
-      <button onclick="contactMe()">Contact Me</button> <!-- Кнопка для связи -->
-    </footer>
-  </div>
-
-  <script src="script.js"></script> <!-- Ссылка на файл с JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
