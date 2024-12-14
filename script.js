@@ -57,8 +57,7 @@ const pages = {
             <p>I am currently working on a new project: a clothing style assistant app that combines user input with dynamic suggestions. Stay tuned!</p>
         </section>
     `,
-     contact: `
-        <section id="contact">
+     <section id="contact">
             <h2>Contact Me</h2>
             <p>If you'd like to get in touch, feel free to contact me via the following methods:</p>
             <ul>
@@ -92,20 +91,23 @@ function loadPage(page) {
 // Обработчики событий на ссылки
 document.addEventListener('DOMContentLoaded', () => {
     loadPage('about'); // Загружаем "About Me" по умолчанию
+
+    // Добавляем обработчики для переходов по ссылкам
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const page = link.getAttribute('data-page');
-            loadPage(page);
+            const page = link.getAttribute('data-page'); // получаем значение атрибута data-page
+            loadPage(page); // загружаем соответствующую страницу
         });
     });
 
-    // Обработчик формы "Свяжитесь со мной"
-    document.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert("Thank you for your message! I'll get back to you soon.");
-    });
+    // Обработчик отправки формы "Свяжитесь со мной"
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Thank you for your message! I'll get back to you soon.");
+            contactForm.reset(); // Очищаем форму после отправки
+        });
+    }
 });
-
-
-
