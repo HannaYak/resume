@@ -1,11 +1,12 @@
 // Массив с твоими навыками
 const skills = [
-    "JavaScript (ES6+), HTML5, CSS3",
-    "React.js (basic knowledge)",
-    "Version Control: Git and GitHub",
-    "Responsive Web Design",
-    "Problem-solving and debugging",
-    "Basic understanding of APIs"
+    "JavaScript (ES6+): I have a solid understanding of JavaScript, including the basics of ES6, asynchronous programming with async/await, working with promises, and error handling.",
+    "I confidently apply these skills in practice to create dynamic web pages.",
+    "HTML5 and CSS3: I create structured, valid web pages using modern HTML5 standards. In my work, I use modern CSS3 features, including flexbox, grid, animations, and transitions.",
+    "Basics of React.js: I am learning React and already using it to build web applications with a component-based approach. I know how to work with component state, props, and hooks.",
+    "Git and GitHub: I confidently use Git for version control. I regularly use GitHub to store projects and collaborate with teams, as well as create pull requests and resolve conflicts.",
+    "Responsive Design: I design websites with mobile devices in mind, using media queries and flexible grids. I create websites that display correctly across various devices.",
+    "Problem Solving: One of my strong points is the ability to find solutions to different challenges, using logic and a creative approach, including debugging and code optimization."
 ];
 
 // Массив с проектами
