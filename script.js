@@ -57,7 +57,8 @@ const pages = {
             <p>I am currently working on a new project: a clothing style assistant app that combines user input with dynamic suggestions. Stay tuned!</p>
         </section>
     `,
-     <section id="contact">
+    contact: `
+        <section id="contact">
             <h2>Contact Me</h2>
             <p>If you'd like to get in touch, feel free to contact me via the following methods:</p>
             <ul>
