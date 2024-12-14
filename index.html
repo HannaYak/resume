@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Resume</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="nav">
-            <button class="nav-btn" onclick="showPage('about')">About Me</button>
-            <button class="nav-btn" onclick="showPage('skills')">Skills</button>
-            <button class="nav-btn" onclick="showPage('projects')">Projects</button>
-        </div>
-    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
 
-    <main>
-        <div id="about" class="page">
+    <div class="content">
+        <!-- About Me -->
+        <section id="about">
             <h2>About Me</h2>
-            <p>I am a passionate 20-year-old aspiring JavaScript developer...</p>
-        </div>
+            <p>I am a 20-year-old aspiring developer with a strong desire to grow in the field of programming. Currently, I have a solid foundation in JavaScript, HTML, and CSS...</p>
+            <p>I have always been passionate about technology and the potential it has to change the world...</p>
+        </section>
 
-        <div id="skills" class="page">
-            <h2>My Skills</h2>
-            <ul id="skills-list"></ul>
-        </div>
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>JavaScript (ES6+):</strong> Solid understanding of JavaScript...</li>
+                <li><strong>HTML5 and CSS3:</strong> Proficient in creating well-structured and valid web pages...</li>
+                <li><strong>React.js:</strong> Actively learning React.js...</li>
+                <li><strong>Git and GitHub:</strong> Comfortable using Git for version control...</li>
+                <li><strong>Responsive Design:</strong> Developing websites with mobile-first principles...</li>
+                <li><strong>Problem Solving:</strong> One of my strengths is troubleshooting...</li>
+            </ul>
+        </section>
 
-        <div id="projects" class="page">
+        <!-- Projects -->
+        <section id="projects">
             <h2>Projects</h2>
-            <ul id="projects-list"></ul>
-        </div>
-    </main>
+            <p>Here are some of the projects I’ve worked on to demonstrate my skills:</p>
+            <ul>
+                <li><strong>Personal Portfolio:</strong> A responsive website that showcases my work...</li>
+                <li><strong>Task Manager App:</strong> A to-do list app created with vanilla JavaScript...</li>
+                <li><strong>Weather App:</strong> A weather application that fetches real-time data...</li>
+            </ul>
+            <p>Each project helped me strengthen different skills and taught me new lessons about web development...</p>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
