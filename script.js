@@ -11,9 +11,12 @@ const skills = [
 
 // Массив с проектами
 const projects = [
-    "Personal Portfolio - A responsive website showcasing my work.",
-    "Task Manager App - A to-do list app built with vanilla JavaScript.",
-    "Weather App - Fetches and displays weather data using an API."
+    "Personal Portfolio",
+    "This project is my first serious web application, created from scratch to showcase my skills and experience. The site is fully responsive and displays correctly on all devices. I used HTML5, CSS3, and JavaScript to create this portfolio, as well as GitHub Pages for hosting. This project provided great practice in working with version control, and throughout the process, I learned how to optimize websites for fast loading and good performance.",
+    "Task Manager App",
+    "This project was built as practice in JavaScript and HTML. It is a simple web application for creating, editing, and deleting tasks. The project was completed using vanilla JavaScript without any third-party libraries. My goal was to master working with the DOM, event handling, and local storage for saving tasks between sessions.",
+    "Weather App",
+    "This project uses a public API to display real-time weather information. The application allows the user to enter a city, and it displays the current temperature, humidity, and other weather parameters. This is a JavaScript project that also uses asynchronous requests and APIs, helping me better understand working with external data and asynchronous operations."
 ];
 
 // Функция для отображения страницы
